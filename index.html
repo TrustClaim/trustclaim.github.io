@@ -23,91 +23,145 @@
     </script>
 
     <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
-        .hero { background: linear-gradient(135deg, #0d6efd, #0099ff); color: white; padding: 60px 0; margin-bottom: 40px; }
-        .card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .verified-badge { background-color: #d4edda; color: #155724; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+        :root {
+            --bs-body-bg: #f8f9fa;
+            --bs-body-font-family: 'Segoe UI', sans-serif;
+        }
         
-        /* Sponsored Link Box Styles */
+        .hero {
+            background: linear-gradient(135deg, #0d6efd, #0099ff);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2.5rem;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .verified-badge {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 0.25rem 0.625rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        /* Link Box Styles */
         .link-box a {
             display: inline-block;
             background-color: #f0f0f0;
             color: #333;
-            padding: 5px 12px;
-            margin: 4px;
-            border-radius: 20px; /* Badge style */
+            padding: 0.375rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 20px;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 0.875rem;
             border: 1px solid #ddd;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
+        
         .link-box a:hover {
             background-color: #0d6efd;
             color: white;
             border-color: #0d6efd;
         }
+        
+        .section-heading {
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .footer-link {
+            font-size: 0.6875rem;
+            color: #666;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #0d6efd;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">TrustClaim 🛡️</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
+        <div class="container-fluid px-md-5">
+            <a class="navbar-brand fw-bold fs-5" href="index.html">TrustClaim 🛡️</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#legit">Legit Sites</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link btn btn-danger text-white px-3 fw-bold btn-sm mt-1 mt-lg-0" href="phishing.html">
-                            ⚠️ Security Alerts
-                        </a>
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#legit">Legit Sites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white px-3 fw-bold mt-2 mt-lg-0" href="phishing.html">⚠️ Security Alerts</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="hero text-center">
+    <section class="hero text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Verified Earning Sites</h1>
-            <p class="lead">I test them. I withdraw money. You earn.</p>
+            <h1 class="display-4 fw-bold mb-3">Verified Earning Sites</h1>
+            <p class="lead mb-2">I test them. I withdraw money. You earn.</p>
             <p class="opacity-75 small">100% Real Reviews with Payment Proofs</p>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="row">
-            
+    <main class="container py-5">
+        <div class="row g-4">
+            <!-- Main Content -->
             <div class="col-lg-8" id="legit">
                 
-                <h3 class="mb-4 fw-bold border-bottom pb-2">✅ Top Paying Sites (Verified)</h3>
+                <!-- Top Paying Sites Section -->
+                <h2 class="section-heading text-success">✅ Top Paying Sites (Verified)</h2>
                 <div class="row g-4 mb-5">
                     
                     <div class="col-md-6">
-                        <div class="card h-100 p-4 text-center border-success border-2">
-                            <div class="mb-2"><span class="badge bg-success">PAYING</span></div>
-                            <h3 class="fw-bold text-primary">CoinPayU</h3>
+                        <div class="card h-100 p-4 text-center border border-success border-2">
+                            <div class="mb-3">
+                                <span class="badge bg-success">PAYING</span>
+                            </div>
+                            <h3 class="fw-bold text-primary mb-2">CoinPayU</h3>
                             <div class="text-warning mb-2">★★★★★</div>
-                            <p class="text-muted small">Best for Crypto. View ads & earn Bitcoin. Fast withdrawal.</p>
-                            <div class="d-grid gap-2">
-                                <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" class="btn btn-primary">Sign Up Now</a>
+                            <p class="text-muted small flex-grow-1">Best for Crypto. View ads & earn Bitcoin. Fast withdrawal.</p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Sign Up Now</a>
                                 <a href="reviews/coinpayu.html" class="btn btn-outline-secondary btn-sm">See My Proof</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <div class="card h-100 p-4 text-center border-success border-2">
-                            <div class="mb-2"><span class="badge bg-success">PAYING</span></div>
-                            <h3 class="fw-bold text-success">Kolotibablo</h3>
+                        <div class="card h-100 p-4 text-center border border-success border-2">
+                            <div class="mb-3">
+                                <span class="badge bg-success">PAYING</span>
+                            </div>
+                            <h3 class="fw-bold text-success mb-2">Kolotibablo</h3>
                             <div class="text-warning mb-2">★★★★☆</div>
-                            <p class="text-muted small">Best Typing Job. Solve captchas and earn USD.</p>
-                            <div class="d-grid gap-2">
-                                <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" class="btn btn-primary">Sign Up Now</a>
+                            <p class="text-muted small flex-grow-1">Best Typing Job. Solve captchas and earn USD.</p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Sign Up Now</a>
                                 <a href="reviews/kolotibablo.html" class="btn btn-outline-secondary btn-sm">See My Proof</a>
                             </div>
                         </div>
@@ -115,56 +169,58 @@
 
                 </div>
 
-                <h3 class="mb-4 fw-bold border-bottom pb-2" style="color: #6f42c1;">🚀 Boost Your Social Media</h3>
+                <!-- Social Media Boost Section -->
+                <h2 class="section-heading" style="color: #6f42c1;">🚀 Boost Your Social Media</h2>
                 <div class="row g-4 mb-5">
                     <div class="col-md-6">
-                        <div class="card h-100 p-3 text-center border-info">
-                            <h5 class="fw-bold">AddMeFast</h5>
-                            <p class="small text-muted">Get free YouTube Subscribers & FB Likes.</p>
-                            <a href="YOUR_ADDMEFAST_LINK" target="_blank" class="btn btn-sm btn-info text-white">Get Free Points</a>
+                        <div class="card h-100 p-4 text-center border border-info">
+                            <h5 class="fw-bold mb-2">AddMeFast</h5>
+                            <p class="small text-muted flex-grow-1">Get free YouTube Subscribers & FB Likes.</p>
+                            <a href="YOUR_ADDMEFAST_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-info text-white">Get Free Points</a>
                         </div>
                     </div>
-                     <div class="col-md-6">
-                        <div class="card h-100 p-3 text-center border-info">
-                            <h5 class="fw-bold">Like4Like</h5>
-                            <p class="small text-muted">Easy exchange for fast views.</p>
-                            <a href="YOUR_LIKE4LIKE_LINK" target="_blank" class="btn btn-sm btn-info text-white">Join Now</a>
+                    <div class="col-md-6">
+                        <div class="card h-100 p-4 text-center border border-info">
+                            <h5 class="fw-bold mb-2">Like4Like</h5>
+                            <p class="small text-muted flex-grow-1">Easy exchange for fast views.</p>
+                            <a href="YOUR_LIKE4LIKE_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-info text-white">Join Now</a>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="mb-4 fw-bold text-danger border-bottom pb-2">🚫 Scam List (Do Not Join)</h3>
-                <div class="card bg-light border-danger mb-5">
+                <!-- Scam List Section -->
+                <h2 class="section-heading text-danger">🚫 Scam List (Do Not Join)</h2>
+                <div class="card bg-light border border-danger mb-5">
                     <div class="card-body">
-                        <h5 class="text-danger fw-bold">BigMoneyClick</h5>
-                        <p class="font-monospace text-decoration-line-through text-muted">❌ [bigmoneyclick.com]</p>
+                        <h5 class="text-danger fw-bold mb-2">BigMoneyClick</h5>
+                        <p class="font-monospace text-decoration-line-through text-muted small mb-2">❌ [bigmoneyclick.com]</p>
                         <p class="small mb-0"><strong>Reason:</strong> Pending withdrawal for 3 months. Support unresponsive.</p>
                     </div>
                 </div>
 
             </div>
 
+            <!-- Sidebar -->
             <div class="col-lg-4">
                 
-                <div class="card mb-4 shadow-sm sticky-top" style="top: 20px; z-index: 1;">
-                    <div class="card-header bg-warning text-dark fw-bold text-center">
+                <div class="card mb-4 shadow-sm sticky-top" style="top: 5rem;">
+                    <div class="card-header bg-warning text-dark fw-bold text-center py-3">
                         🌐 Trending on Web
                     </div>
                     
                     <div class="card-body link-box text-center">
-                        <p class="small text-muted mb-2">Explore links from our community:</p>
+                        <p class="small text-muted mb-3">Explore links from our community:</p>
                         
-                        <a href="#">Best Flowers 🌸</a>
-                        <a href="#">Cheap Insurance 🚗</a>
-                        <a href="#">Tech News 📱</a>
-                        <a href="#">Health Tips 🏥</a>
-                        <a href="#">Online Jobs 💻</a>
+                        <a href="#" class="badge badge-pill">Best Flowers 🌸</a>
+                        <a href="#" class="badge badge-pill">Cheap Insurance 🚗</a>
+                        <a href="#" class="badge badge-pill">Tech News 📱</a>
+                        <a href="#" class="badge badge-pill">Health Tips 🏥</a>
+                        <a href="#" class="badge badge-pill">Online Jobs 💻</a>
 
                     </div>
                     
-                    <div class="card-footer text-center" style="background-color: #f8f9fa;">
-                        <a href="YOUR_FOLLOWLIKE_REFERRAL_LINK" target="_blank" 
-                           style="font-size: 11px; color: #666; text-decoration: none; font-weight: bold;">
+                    <div class="card-footer text-center bg-light">
+                        <a href="YOUR_FOLLOWLIKE_REFERRAL_LINK" target="_blank" rel="noopener noreferrer" class="footer-link">
                            🚀 Want Free Traffic? Ads by FollowLike
                         </a>
                     </div>
@@ -172,12 +228,12 @@
 
             </div>
         </div>
-    </div>
+    </main>
 
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
-            <p class="mb-0">© 2025 TrustClaim. Honest Reviews Only.</p>
-            <p class="small opacity-50">This site does not offer financial advice. Do your own research.</p>
+            <p class="mb-2">© 2025 TrustClaim. Honest Reviews Only.</p>
+            <p class="small opacity-50 mb-0">This site does not offer financial advice. Do your own research.</p>
         </div>
     </footer>
 
