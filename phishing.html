@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ Phishing & Fake Sites Alerts | TrustClaim</title>
+    <meta name="description" content="Phishing and fake website alerts. Stay safe from scams and identity theft.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #00008B;
+            --accent-gold: #FFD700;
+            --danger-red: #c82333;
+            --success-green: #28a745;
+            --bs-body-bg: #f8f9fa;
+            --bs-body-font-family: 'Segoe UI', sans-serif;
+        }
+
+        .navbar-brand { font-weight: 700; }
+
+        .page-header {
+            background: linear-gradient(135deg, #00008B, #1a1a8f);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            font-size: 2.5rem;
+        }
+
+        .page-header p {
+            margin: 0;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .section-wrapper {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-card {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            border: 2px solid var(--success-green);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .status-card h3 {
+            color: var(--success-green);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-card p {
+            color: #155724;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        table thead th {
+            background-color: var(--primary-blue);
+            color: white;
+            font-weight: 700;
+        }
+
+        .info-box {
+            background-color: #e7f3ff;
+            border-left: 5px solid var(--primary-blue);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-box h5 {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-box p {
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .risk-high {
+            color: #c82333;
+            font-weight: 700;
+        }
+
+        .risk-medium {
+            color: #fd7e14;
+            font-weight: 700;
+        }
+
+        .risk-low {
+            color: #28a745;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
+        <div class="container-fluid px-md-5">
+            <a class="navbar-brand fw-bold fs-5" href="/">TrustClaim 🛡️</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#legit">Legit Sites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/scam-list.html">🚫 Scam List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white px-3 fw-bold mt-2 mt-lg-0 active" href="/phishing.html">⚠️ Security Alerts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>⚠️ Phishing & Fake Sites</h1>
+            <p>Phishing sites are fake websites that look exactly like real ones to steal your passwords. <strong>NEVER enter your details on them.</strong></p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="section-wrapper">
+            <div class="status-card">
+                <h3>✅ Good News!</h3>
+                <p>No active phishing threats detected at the moment.</p>
+            </div>
+
+            <div class="info-box">
+                <h5>🔒 How to Protect Yourself</h5>
+                <p>
+                    Always verify the website URL before entering your login credentials. Look for the padlock icon in the address bar. 
+                    Legitimate sites use HTTPS (secure) connections. If you receive suspicious emails asking you to verify your account, 
+                    do NOT click the link—go directly to the official website instead.
+                </p>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
+                <h2 class="h4 mb-2" style="color: var(--primary-blue); font-weight: 800;">Detected Phishing URLs</h2>
+                <span class="badge" style="background-color: var(--accent-gold); color: var(--primary-blue); font-weight: 700;">Updated Dec 2025</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fake Site URL</th>
+                            <th scope="col">Impersonating</th>
+                            <th scope="col">Risk Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Empty for now - ready to populate with detected phishing sites -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-muted small text-center mt-3">
+                No phishing sites detected at this time. We continuously monitor for threats and will update this list immediately if any are found.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-2">© 2025 TrustClaim. Honest Reviews Only.</p>
+            <p class="small opacity-50 mb-0">This site does not offer financial advice. Do your own research.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
